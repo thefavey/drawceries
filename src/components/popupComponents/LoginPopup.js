@@ -1,8 +1,8 @@
 import React from "react";
 
 import PopupBase from "./PopupBase.js";
-import ConfirmButton from "./listViewComponents/ConfirmButton.js";
-import "../App.css";
+import ConfirmButton from "./ConfirmButton.js";
+import "../../App.css";
 
 const LoginPopup = ({
   currentUser,

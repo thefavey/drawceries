@@ -1,6 +1,6 @@
 import React from "react";
 
-import PopupBase from "../PopupBase.js";
+import PopupBase from "./PopupBase.js";
 import ConfirmButton from "./ConfirmButton.js";
 import { dateToString } from "../../utils.js";
 import "../../App.css";
@@ -42,6 +42,7 @@ const UnboughtGroceryPopup = ({
       <form className="popupForm" onSubmit={handleSubmit}>
         <div className="formItem">
           <input
+            aria-label="price"
             name="price"
             type="number"
             step="0.01"

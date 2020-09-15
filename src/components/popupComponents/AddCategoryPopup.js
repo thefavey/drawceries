@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import PopupBase from "../PopupBase.js";
+import PopupBase from "./PopupBase.js";
 import "../../App.css";
 
 const AddCategoryPopup = ({ groceryCategories, addCategory, closePopup }) => {
@@ -25,7 +25,13 @@ const AddCategoryPopup = ({ groceryCategories, addCategory, closePopup }) => {
     <PopupBase title="" closePopup={closePopup} anim="dropAnim">
       <form className="popupForm" onSubmit={handleSubmit}>
         <div>
-          <input name="name" type="text" placeholder="Category name" required />
+          <input
+            aria-label="category name"
+            name="name"
+            type="text"
+            placeholder="Category name"
+            required
+          />
         </div>
         {errMsg && <p>{errMsg}</p>}
         <div className="popupButton">

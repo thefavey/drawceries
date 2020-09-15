@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 
 import "../../App.css";
 
 const RecipeDisplay = ({ recipe }) => {
-  const history = useHistory();
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -19,11 +17,11 @@ const RecipeDisplay = ({ recipe }) => {
       if (res.status !== 200) {
         console.log("error " + res.status.toString());
       } else {
-        return (await res.json()).sourceUrl;
+        window.location.href = (await res.json()).sourceUrl;
       }
     };
-    console.log("link click")
-    history.push(fetchRecipeUrl(recipe.id));
+    fetchRecipeUrl(recipe.id);
+    return null;
   };
 
   return (

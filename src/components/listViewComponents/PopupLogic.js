@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import AddGroceryPopup from "./listViewComponents/AddGroceryPopup.js";
-import AddCategoryPopup from "./listViewComponents/AddCategoryPopup.js";
-import BoughtGroceryPopup from "./listViewComponents/BoughtGroceryPopup.js";
-import UnboughtGroceryPopup from "./listViewComponents/UnboughtGroceryPopup.js";
-import LoginPopup from "./LoginPopup.js";
+import AddGroceryPopup from "../popupComponents/AddGroceryPopup.js";
+import AddCategoryPopup from "../popupComponents/AddCategoryPopup.js";
+import BoughtGroceryPopup from "../popupComponents/BoughtGroceryPopup.js";
+import UnboughtGroceryPopup from "../popupComponents/UnboughtGroceryPopup.js";
+import LoginPopup from "../popupComponents/LoginPopup.js";
 
-import "../App.css";
+import "../../App.css";
 
 const PopupLogic = ({
   popupType,

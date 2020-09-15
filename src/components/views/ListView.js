@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import GroceryCategories from "./listViewComponents/GroceryCategories.js";
-import AddGroceryButton from "./listViewComponents/AddGroceryButton.js";
-import GroceryList from "./listViewComponents/GroceryList.js";
-import PopupLogic from "./PopupLogic.js";
-import "../App.css";
+import GroceryCategories from "../listViewComponents/GroceryCategories.js";
+import AddGroceryButton from "../listViewComponents/AddGroceryButton.js";
+import GroceryList from "../listViewComponents/GroceryList.js";
+import PopupLogic from "../listViewComponents/PopupLogic.js";
+import "../../App.css";
 
 const ListView = ({
   groceryCategoriesDb,

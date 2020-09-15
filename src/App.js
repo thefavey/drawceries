@@ -52,7 +52,6 @@ const App = () => {
   const removeGrocery = (grocery) => {
     setGroceriesDb(groceriesDb.filter((item) => item !== grocery));
   };
-
   // End DB simulation
 
   const [currentTab, setCurrentTab] = useState("list");

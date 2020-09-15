@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
-import "../App.css";
+import "../../App.css";
 
 const PopupBase = ({ title, children, closePopup, cancelPopup, anim }) => {
   return (

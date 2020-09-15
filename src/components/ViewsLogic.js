@@ -1,10 +1,9 @@
 import React from "react";
 
-import LoginPopup from "./LoginPopup.js";
-import ListView from "./ListView.js";
-import StatsView from "./StatsView.js";
-import RecipesView from "./RecipesView.js";
-
+import LoginPopup from "./popupComponents/LoginPopup.js";
+import ListView from "./views/ListView.js";
+import StatsView from "./views/StatsView.js";
+import RecipesView from "./views/RecipesView.js";
 import "../App.css";
 
 const ViewsLogic = ({

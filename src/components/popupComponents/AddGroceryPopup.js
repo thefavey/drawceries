@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import PopupBase from "../PopupBase.js";
+import PopupBase from "./PopupBase.js";
 import { currentDate } from "../../utils.js";
 import "../../App.css";
 
@@ -42,13 +42,24 @@ const AddGroceryPopup = ({
     >
       <form className="popupForm" onSubmit={handleSubmit}>
         <div className="formItem">
-          <input name="name" type="text" placeholder="Name" required />
+          <input
+            aria-label="name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            required
+          />
         </div>
         <div className="formItem">
-          <input name="quantity" type="text" placeholder="Quantity" />
+          <input
+            aria-label="quantity"
+            name="quantity"
+            type="text"
+            placeholder="Quantity"
+          />
         </div>
         <div className="formItem">
-          <select name="category">
+          <select aria-label="category" name="category">
             {["Category", ...groceryCategories].map((item) => (
               <option key={item} value={item}>
                 {item}

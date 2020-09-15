@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import CategoriesDropDown from "./listViewComponents/CategoriesDropdown.js";
-import RecipeDisplay from "./recipesViewComponents/RecipeDisplay.js";
-import "../App.css";
+import CategoriesDropDown from "../listViewComponents/CategoriesDropdown.js";
+import RecipeDisplay from "../recipesViewComponents/RecipeDisplay.js";
+import "../../App.css";
 
 const RecipesView = ({ groceriesDb, groceryCategoriesDb }) => {
   const [groceryCategories, setGroceryCategories] = useState(null);
@@ -11,6 +11,7 @@ const RecipesView = ({ groceriesDb, groceryCategoriesDb }) => {
   const [recipes, setRecipes] = useState(null);
 
   useEffect(() => {
+    //simulate fetching data from db
     setGroceriesDict(groceriesDb);
     setGroceryCategories(groceryCategoriesDb);
   }, [groceriesDb, groceryCategoriesDb]);
@@ -31,7 +32,14 @@ const RecipesView = ({ groceriesDb, groceryCategoriesDb }) => {
         );
         if (res.status !== 200) {
           setRecipes([
-            { id: "err", image: "", title: "Error loading recipes." },
+            {
+              id: "err",
+              image: "",
+              title:
+                "Error loading recipes (Error code " +
+                res.status.toString() +
+                "). View JS console for details.",
+            },
           ]);
         } else {
           setRecipes(await res.json());
@@ -54,7 +62,10 @@ const RecipesView = ({ groceriesDb, groceryCategoriesDb }) => {
     );
   };
 
-  return groceriesDict && groceryCategories && recipes ? (
+  return groceriesDict &&
+    groceryCategories &&
+    selectedIngredients &&
+    recipes ? (
     <div className="view">
       <div className="viewContent">
         <div className="viewTitle">Recipes</div>

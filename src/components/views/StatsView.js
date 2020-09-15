@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import MoneySpentChart from "./statsViewComponents/MoneySpentChart.js";
-import "../App.css";
+import MoneySpentChart from "../statsViewComponents/MoneySpentChart.js";
+import "../../App.css";
 
 const StatsView = ({ groceriesDb }) => {
   const [groceriesDict, setGroceriesDict] = useState(null);
