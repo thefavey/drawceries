@@ -9,6 +9,7 @@ const groceriesDbToDaysData = (groceries) => {
     .sort((a, b) => (a.boughtOn > b.boughtOn ? 1 : -1));
 
   let sortedGroupedDates = (boughtGroceries) => {
+    // returns array of [date, money spent on that date]
     let returns = [];
     boughtGroceries.forEach((grocery) => {
       const alreadyIndex = returns
@@ -28,6 +29,7 @@ const groceriesDbToDaysData = (groceries) => {
   };
 
   const datesAndCumul = (datesAndPrices) => {
+    // returns array of [date, money spent until that date]
     const cumulVal = (groceryList, index) => {
       let returns = 0;
       for (let i = 0; i <= index; i++) {
@@ -43,6 +45,7 @@ const groceriesDbToDaysData = (groceries) => {
   };
 
   const arrayToXandY = (array) => {
+    // format data for chart
     let returns = [];
     array.forEach((item) => {
       returns.push({ x: item[0], y: item[1] });
