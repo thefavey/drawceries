@@ -33,12 +33,12 @@ View current shopping list.
 
 ### Stats
 
-View stats. 
+View stats.
 
 Notes:
-- This tab is the least advanced of the project because it requires the most time as I am not yet familiar with D3 or any data visualisation libraries. 
+- This tab is the least advanced of the project because it requires the most time as I am not yet familiar with D3 or any data visualisation libraries.
 - However, I have added a chart that displays the cumulated money spent depending on the date. The function to extract the right data from the groceries database has been written and a basic chart displays it.
-- I have decided not to spend too much time styling the chart (yet), but it is something that needs to be done. 
+- I have decided not to spend too much time styling the chart (yet), but it is something that needs to be done.
 - I have chosen the "react-charts" library because it seemed the simplest and I hadn't asked Leo about a recommendation yet. I would use another one if I were to keep working on the project.
 
 
@@ -74,16 +74,16 @@ Ideas for future:
 
 ### Notes on login
 
-Login is very primitive at this stage. 
+Login is very primitive at this stage.
 
 The user enters his/her name and that's it. The user name is then stored in the application state. Users can log out or switch user by clicking the login icon in the top right corner. A more advanced login logic linked to a database would be required before deploying the app to production.
 
 
 ### Notes on database
 
-There is no external database at this stage. 
+There is no external database at this stage.
 
-- Two databases (groceries and categories) are simulated as app state. This state is passed on to those children components that would require data from an external database. 
+- Two databases (groceries and categories) are simulated as app state. This state is passed on to those children components that would require data from an external database.
 - API calls to the database are simulated by a simple useEffect hook that sets the component state. With an external database, this hook would make actual API calls to query the database.
 - Database actions take place in the top-level App component and are passed down to children as props, which greatly increases the number of props being passed down to children components. With an external database, those props would no longer need to be passes down. With an external database, the following props would no longer be passed: groceryCategoriesDb, groceriesDb, buyGrocery, unbuyGrocery, removeGrocery, addCategory.
 
@@ -94,5 +94,4 @@ There is no external database at this stage.
 - I have read that it is better to use a single CSS file for the entire app. Is that true? And why?
 - I would like to know whether the directory structure is a good one and what would need to be improved.
 - I am pretty proud of the way the app feels (in particular in the more advanced List and Recipes tabs).
-
-
+- Favicon and meta tags etc. need to be added to make it a good PWA.
