@@ -143,6 +143,7 @@ select:focus {
   flex-grow: 1;
   border: none;
   background: #fcfcfc;
+  margin:0px 0px 0px 0px;
 }
 
 .tabIcon {
