@@ -35,6 +35,7 @@ select:focus {
 .app {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .header {
@@ -53,7 +54,7 @@ select:focus {
   text-align: center;
   font-size: 30px;
   letter-spacing: 5px;
-  font-weight: 50;
+  font-weight: 80;
 }
 
 .draw {
@@ -145,14 +146,14 @@ select:focus {
 }
 
 .tabIcon {
-  height: 50%;
-  width: 50%;
+  height: 4vh;
+  width:4vh;
   color: darkgrey;
 }
 
 .tabIconHighlighted {
-  height: 70%;
-  width: 70%;
+  height: 5vh;
+  width: 5vh;
   transition: 0.2s;
   color: ForestGreen;
 }
@@ -283,7 +284,7 @@ select:focus {
 
 .addGroceryButton {
   position: fixed;
-  bottom: 60px;
+  bottom: 8vh;
   width: 70vw;
   text-align: center;
   height: 50px;
