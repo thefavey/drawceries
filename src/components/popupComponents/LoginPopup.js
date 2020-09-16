@@ -11,6 +11,7 @@ const LoginPopup = ({
   cancelLogin,
 }) => {
   const handleSubmit = (e) => {
+    e.preventDefault();
     handleUserChange(e.target.user.value);
     closeLogin();
   };

@@ -1,4 +1,4 @@
-Drawceries App. Pet project for Drawbotics by Thomas Favey. Available at [sparring.app](https://sparring.app). Designed for mobile. Works best in Google Chrome device simulator.
+Drawceries App. Pet project for Drawbotics by Thomas Favey. Available at [sparring.app](https://sparring.app). Designed for mobile.
 
 ## Application Navigation
 
@@ -95,6 +95,3 @@ There is no external database at this stage.
 - I would like to know whether the directory structure is a good one and what would need to be improved.
 - I am pretty proud of the way the app feels (in particular in the more advanced List and Recipes tabs).
 - Favicon and meta tags etc. need to be added to make it a good PWA.
-
-### Current problems
-- e.preventDefault() does not seem to be working in mobile Safari. So impossible to log in and take actions.
